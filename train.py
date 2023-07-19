@@ -20,7 +20,7 @@ def read_data_from_file(path, num_rows=None):
         for i, row in enumerate(reader):
             if num_rows is not None and i >= num_rows:
                 break
-            data.append((row[1].split(), row[0]))  # [1] = text, [0] = label
+            data.append((row[1].split(), row[0]))  # text, label
     return data
 
 # Get data - use only a part of it to speed up training/testing
