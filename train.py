@@ -1,5 +1,5 @@
 # Simple Bag-of-Words classifier for sentiment classification of restaurant reviews with Pytorch
-# Data from: 
+# Data from Xiang Zhang: 
 # https://drive.google.com/drive/folders/0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M?resourcekey=0-TLwzfR2O-D2aPitmn5o9VQ
 # (yelp_review_polarity_csv)
 
