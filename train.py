@@ -5,10 +5,11 @@
 
 import torch
 import torch.optim as optim
+from collections import Counter
+import csv
 
 from bow import make_word_dictionary, make_label_dictionary, make_bow_vector, make_label_vector
 from model import BoWClassifier
-import csv
 
 torch.manual_seed(1) # reproduceability
 
@@ -26,6 +27,9 @@ def read_data_from_file(path, num_rows=None):
 training_data = read_data_from_file('data/train.csv', 10000)
 test_data = read_data_from_file('data/test.csv', 1000)
 
+# get target class distribution in train and test, should be ~50%
+print(Counter(label for txt, label in training_data)) 
+print(Counter(label for txt, label in test_data))
 
 # Get dictionaries
 word_dictionary = make_word_dictionary(training_data, 10)   # UNKs are not handled here, see "make_word_dictionary()"
